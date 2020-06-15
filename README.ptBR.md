@@ -4,7 +4,7 @@
 *Leia em outras linguagens: [English](README.md), [Português](README.ptBR.md).*
 
 ## Instalação
-1. Baixe **[Latest Version](https://github.com/ellingtonsantos/AddOnOrganizer/archive/master.zip)**
+1. Baixe a **[Última Versão](https://github.com/ellingtonsantos/AddOnOrganizer/archive/master.zip)**
 2. Descompacte o arquivo Zip
 3. Renomeie a pasta "AddOnOrganizer-master" para "AddOnOrganizer"
 4. Copie "AddOnOrganizer" dentro de Wow-Directory\Interface\AddOns\
