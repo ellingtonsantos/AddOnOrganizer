@@ -384,7 +384,7 @@
 			</Button>
 			<Button name="$parent_AcceptButton" inherits="UIPanelButtonTemplate" text="L_ACCEPT">
 				<Size>
-					<AbsDimension x="131" y="21"/>
+					<AbsDimension x="120" y="21"/>
 				</Size>
 				<Anchors>
 					<Anchor point="BOTTOMLEFT">
@@ -407,7 +407,7 @@
 			</Button>
 			<Button name="$parent_ReloadUIButton" inherits="UIPanelButtonTemplate" text="L_RELOADUI">
 				<Size>
-					<AbsDimension x="66" y="21"/>
+					<AbsDimension x="88" y="21"/>
 				</Size>
 				<Anchors>
 					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parent_AcceptButton"/>
@@ -420,7 +420,7 @@
 			</Button>
 			<Button name="$parent_CloseButton2" inherits="UIPanelButtonTemplate" text="L_CANCEL">
 				<Size>
-					<AbsDimension x="131" y="21"/>
+					<AbsDimension x="120" y="21"/>
 				</Size>
 				<Anchors>
 					<Anchor point="BOTTOMRIGHT">
@@ -437,7 +437,7 @@
 			</Button>
 			<Button name="$parent_EnableAll" inherits="UIPanelButtonTemplate" text="L_ENABLE_ALL">
 				<Size>
-					<AbsDimension x="90" y="21"/>
+					<AbsDimension x="115" y="21"/>
 				</Size>
 				<Anchors>
 					<Anchor point="TOPLEFT">
@@ -454,7 +454,7 @@
 			</Button>
 			<Button name="$parent_DisableAll" inherits="UIPanelButtonTemplate" text="L_DISABLE_ALL">
 				<Size>
-					<AbsDimension x="90" y="21"/>
+					<AbsDimension x="115" y="21"/>
 				</Size>
 				<Anchors>
 					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent_EnableAll">

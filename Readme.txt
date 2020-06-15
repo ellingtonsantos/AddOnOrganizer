@@ -16,9 +16,12 @@
  been waiting for.
 
 #-History:-#
+ v.1.1201
+ Resize buttons to fit the translated text.
+
  v.1.1200
  Updated version and ui number to match the
- 1.12 patch! 
+ 1.12 patch!
  Added support to localization.
  Added ptBR localization.
 
