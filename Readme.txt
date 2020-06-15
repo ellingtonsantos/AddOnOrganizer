@@ -2,7 +2,7 @@
 #Thank you for trying CS_AddOnOrganizer!#
 #---------------------------------------#
 
-#-Version: 1.1200-#
+#-Version: 1.1201-#
 
 #-Features:-#
  This mod allows you to turn on and off,
