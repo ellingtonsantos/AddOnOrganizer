@@ -1,6 +1,8 @@
 ## Interface: 11200
-## Title: Add On Organizer
-## Notes: Lists and organizes all of you'r addons, let's you create global profiles.
+## Title: AddOn Organizer
+## Notes: Lists and organizes all of your addons, let you create global profiles.
+## Notes-ptBR: Lista e organiza todos os seus addons, permitindo que você crie perfis globais.
 ## SavedVariables: AddOnOrganizer_Profiles
 ## Author: Christian Schubert
+## Version: 1.1200
 AddOnOrganizer.xml

@@ -1,4 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="Localization.lua"/>
 	<Script file="AddOnOrganizer.lua"/>
 	<Button name="CS_AddOnOrganizer_TitleButtonTemplate" virtual="true">
 		<Size>
@@ -250,7 +251,7 @@
 			</Backdrop>
 			<Layers>
 				<Layer level="OVERLAY">
-					<FontString name="$parent_Dec1" inherits="GameFontNormalSmall" text="Type a new name into the textbox,">
+					<FontString name="$parent_Dec1" inherits="GameFontNormalSmall" text="L_PROFILE_TEXT1">
 						<Anchors>
 							<Anchor point="TOPLEFT" relativeTo="$parent">
 								<Offset>
@@ -259,7 +260,7 @@
 							</Anchor>
 						</Anchors>
 					</FontString>
-					<FontString name="$parent_Dec2" inherits="GameFontNormalSmall" text="press 'Save' to save a new profile.">
+					<FontString name="$parent_Dec2" inherits="GameFontNormalSmall" text="L_PROFILE_TEXT2">
 						<Anchors>
 							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent_Dec1">
 								<Offset>
@@ -311,7 +312,7 @@
 					</Anchors>
 					<Layers>
 						<Layer level="OVERLAY">
-							<FontString inherits="GameFontNormalSmall" text="Profiles:">
+							<FontString inherits="GameFontNormalSmall" text="L_PROFILE_TEXT3">
 								<Anchors>
 									<Anchor point="TOPLEFT">
 										<Offset>
@@ -327,7 +328,7 @@
 						<OnShow>CS_AddOnOrganizer_Profiles_ProfilesDropDown_OnLoad()</OnShow>
 					</Scripts>
 				</Frame>
-				<Button name="SaveProfile" inherits="UIPanelButtonTemplate" text="Save">
+				<Button name="SaveProfile" inherits="UIPanelButtonTemplate" text="L_SAVE">
 					<Size>
 						<AbsDimension x="120" y="21"/>
 					</Size>
@@ -344,7 +345,7 @@
 						</OnClick>
 					</Scripts>
 				</Button>
-				<Button name="DeleteProfile" inherits="UIPanelButtonTemplate" text="Delete">
+				<Button name="DeleteProfile" inherits="UIPanelButtonTemplate" text="L_DELETE">
 					<Size>
 						<AbsDimension x="120" y="21"/>
 					</Size>
@@ -381,7 +382,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="$parent_AcceptButton" inherits="UIPanelButtonTemplate" text="Accept">
+			<Button name="$parent_AcceptButton" inherits="UIPanelButtonTemplate" text="L_ACCEPT">
 				<Size>
 					<AbsDimension x="131" y="21"/>
 				</Size>
@@ -397,14 +398,14 @@
 						CS_AddOnOrganizer_AcceptButton_OnClick();
 					</OnClick>
 					<OnEnter>
-						GameTooltip_AddNewbieTip("Accept", 1.0, 1.0, 1.0,"Warning! Some UI's need a restart of WOW in order to work properly!\nAlso remember not to unload any addon wich is a dependencie.", 1);
+						GameTooltip_AddNewbieTip(L["Accept"], 1.0, 1.0, 1.0,L["Warning! Some UI's need a restart of WOW in order to work properly!\nAlso remember not to unload any addon which is a dependency."], 1);
 					</OnEnter>
 					<OnLeave>
 						GameTooltip:Hide();
 					</OnLeave>
 				</Scripts>
 			</Button>
-			<Button name="$parent_ReloadUIButton" inherits="UIPanelButtonTemplate" text="ReloadUI">
+			<Button name="$parent_ReloadUIButton" inherits="UIPanelButtonTemplate" text="L_RELOADUI">
 				<Size>
 					<AbsDimension x="66" y="21"/>
 				</Size>
@@ -417,7 +418,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="$parent_CloseButton2" inherits="UIPanelButtonTemplate" text="Cancel">
+			<Button name="$parent_CloseButton2" inherits="UIPanelButtonTemplate" text="L_CANCEL">
 				<Size>
 					<AbsDimension x="131" y="21"/>
 				</Size>
@@ -434,7 +435,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="$parent_EnableAll" inherits="UIPanelButtonTemplate" text="Enable All">
+			<Button name="$parent_EnableAll" inherits="UIPanelButtonTemplate" text="L_ENABLE_ALL">
 				<Size>
 					<AbsDimension x="90" y="21"/>
 				</Size>
@@ -451,7 +452,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="$parent_DisableAll" inherits="UIPanelButtonTemplate" text="Disable All">
+			<Button name="$parent_DisableAll" inherits="UIPanelButtonTemplate" text="L_DISABLE_ALL">
 				<Size>
 					<AbsDimension x="90" y="21"/>
 				</Size>
@@ -469,7 +470,7 @@
 				</Scripts>
 			</Button>
 			
-			<Button name="$parent_Profile" inherits="UIPanelButtonTemplate" text="Profiles...">
+			<Button name="$parent_Profile" inherits="UIPanelButtonTemplate" text="L_PROFILES">
 				<Size>
 					<AbsDimension x="80" y="21"/>
 				</Size>

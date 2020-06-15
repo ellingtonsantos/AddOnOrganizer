@@ -4,7 +4,7 @@
 CS_ADDONORGANIZER_ADDONS_DISPLAYED = 22;
 CS_ADDONORGANIZER_ADDONSLINE_HEIGHT = 16;
 CS_AddOnOrganizer_Profiles = {};
-CS_ADDONORGANIZER_VERSIONNUMBER = "1.1011";
+CS_ADDONORGANIZER_VERSIONNUMBER = "1.1200";
 BINDING_HEADER_CS_ADDONORGANIZER_SEP = "AddOnOrganizer";
 BINDING_NAME_CS_ADDONORGANIZER_CONFIG = "Show / Hide";
 
@@ -27,7 +27,7 @@ end
 
 function CS_AddOnOrganizer_OnEvent(event)
 	if(event == "PLAYER_LOGIN")then
-		--DEFAULT_CHAT_FRAME:AddMessage("|CFFFFFFFFCS_AddOnOrganizer|r |CFF00FF00Loaded|r");
+	   DEFAULT_CHAT_FRAME:AddMessage("|CFFFFFFFF" .. L["CS_AddOnOrganizer"] .. "|r |CFF00FF00" .. L["Loaded"] .. "|r");
 		--CS_AddOnOrganizer_Profiles = {[1] = {"Default (Only CS_AddOnOrganizer)","CS_AddOnOrganizer",},};
 	end
 end
@@ -81,14 +81,14 @@ function CS_AddOnOrganizer_List_Update()
 			end
 			
 			if(CS_AddOnOrganizer_AddOnList[addonIndex] == 1) then
-				addonTitleTag:SetText("Enabled");
+				addonTitleTag:SetText(L["Enabled"]);
 				if(enabled)then
 					addonTitleTag:SetTextColor(1.0,0.7,0.0);
 				else
 					addonTitleTag:SetTextColor(0.0,1.0,0.0);
 				end
 			else
-				addonTitleTag:SetText("Disabled");
+				addonTitleTag:SetText(L["Disabled"]);
 				if(not enabled)then
 					addonTitleTag:SetTextColor(1.0,0.7,0.0);
 				else
@@ -112,7 +112,7 @@ function CS_AddOnOrganizer_TitleButton_OnClick()
 	local name, title, notes, enabled, loadable, reason, security = GetAddOnInfo(AddOnID);
 	
 	if(CS_AddOnOrganizer_AddOnList[AddOnID] == 1) then
-		addonTitleTag:SetText("Disabled");
+		addonTitleTag:SetText(L["Disabled"]);
 		if(not enabled)then
 			addonTitleTag:SetTextColor(1.0,0.7,0.0);
 		else
@@ -120,7 +120,7 @@ function CS_AddOnOrganizer_TitleButton_OnClick()
 		end
 		CS_AddOnOrganizer_AddOnList[AddOnID] = 0;
 	else
-		addonTitleTag:SetText("Enabled");
+		addonTitleTag:SetText(L["Enabled"]);
 		if(enabled)then
 			addonTitleTag:SetTextColor(1.0,0.7,0.0);
 		else
@@ -138,26 +138,26 @@ function CS_AddOnOrganizer_TitleButton_OnEnter()
 	
 	--DEFAULT_CHAT_FRAME:AddMessage(buttonID);
 	if (title == nil) then
-		title = "No Title";
+		title = L["No Title"];
 	end
 	if (dependencies == nil) then
-		dependencies = "No Dependencies";
+		dependencies = L["No Dependencies"];
 	end
 	if(notes == nil) then
-		notes = "No Notes";
+		notes = L["No Notes"];
 	end
 	if(loadondemand) then
-		loadondemand = "|CFF00FF00True|r";
+		loadondemand = "|CFF00FF00" .. L["True"] .. "|r";
 	else
-		loadondemand = "|CFFFF0000False|r";
+		loadondemand = "|CFFFF0000" .. L["False"] .. "|r";
 	end
 	
 	if(loadable ~= nil)then
-		GameTooltip_AddNewbieTip(name, 1.0, 1.0, 1.0, title.."\n"..notes.."\n|CFFFFFFFFAddon is Loadable:|r|CFF00FF00True|r\n".."|CFFFFFFFFLoadOnDemand:|r "..loadondemand.."\n|CFFFFFFFFDependencies:|r "..dependencies, 1);
+		GameTooltip_AddNewbieTip(name, 1.0, 1.0, 1.0, title.."\n"..notes.."\n|CFFFFFFFF" .. L["Addon is Loadable"] .. ":|r |CFF00FF00" .. L["True"] .. "|r\n".."|CFFFFFFFF" .. L["LoadOnDemand"] .. ":|r "..loadondemand.."\n|CFFFFFFFF" .. L["Dependencies"] .. ":|r "..dependencies, 1);
 	elseif(reason == "DISABLED") then
-		GameTooltip_AddNewbieTip(name, 1.0, 1.0, 1.0, title.."\n"..notes.."\n|CFFFFFFFFAddon is Loadable:|r |CFFFF0000False|r\n|CFFFFFFFFReason:|r |CFFFF0000"..reason.."|r\n|CFFFFFFFFYou might still enable this addon.|r\n".."|CFFFFFFFFLoadOnDemand:|r "..loadondemand.."\n|CFFFFFFFFDependencies:|r "..dependencies, 1);
+		GameTooltip_AddNewbieTip(name, 1.0, 1.0, 1.0, title.."\n"..notes.."\n|CFFFFFFFF" .. L["Addon is Loadable"] .. ":|r |CFFFF0000" .. L["False"] .. "|r\n|CFFFFFFFF" .. L["Reason"] .. ":|r |CFFFF0000"..L[reason].."|r\n|CFFFFFFFF" .. L["You might still enable this addon"] ..".|r\n".."|CFFFFFFFF" .. L["LoadOnDemand"] .. ":|r "..loadondemand.."\n|CFFFFFFFF" .. L["Dependencies"] .. ":|r "..dependencies, 1);
 	else
-		GameTooltip_AddNewbieTip(name, 1.0, 1.0, 1.0, title.."\n"..notes.."\n|CFFFFFFFFAddon is Loadable:|r|CFFFF0000 False|r\n|CFFFFFFFFReason:|r |CFFFF0000"..reason.."|r\n".."|CFFFFFFFFLoadOnDemand:|r "..loadondemand.."\n|CFFFFFFFFDependencies:|r "..dependencies, 1);
+		GameTooltip_AddNewbieTip(name, 1.0, 1.0, 1.0, title.."\n"..notes.."\n|CFFFFFFFF" .. L["Addon is Loadable"] .. ":|r |CFFFF0000" .. L["False"] .. "|r\n|CFFFFFFFF" .. L["Reason"] .. ":|r |CFFFF0000"..L[reason].."|r\n|CFFFFFFFF" .. L["LoadOnDemand"] .. ":|r "..loadondemand.."\n|CFFFFFFFF" .. L["Dependencies"] .. ":|r "..dependencies, 1);
 	end
 end
 
@@ -195,7 +195,7 @@ function CS_AddOnOrganizer_EnableAll()
 		if( i <= CS_ADDONORGANIZER_ADDONS_DISPLAYED)then
 			local addonTitleTag = getglobal("CS_AddOnOrganizer_List_Title"..i.."Tag");
 			local name, title, notes, enabled, loadable, reason, security = GetAddOnInfo(i);
-			addonTitleTag:SetText("Enabled");
+			addonTitleTag:SetText(L["Enabled"]);
 			if(enabled)then
 				addonTitleTag:SetTextColor(1.0,0.7,0.0);
 			else
@@ -214,7 +214,7 @@ function CS_AddOnOrganizer_DisableAll()
 			local addonTitleTag = getglobal("CS_AddOnOrganizer_List_Title"..i.."Tag");
 			local name, title, notes, enabled, loadable, reason, security = GetAddOnInfo(i);
 			
-			addonTitleTag:SetText("Disabled");
+			addonTitleTag:SetText(L["Disabled"]);
 			if(not enabled)then
 				addonTitleTag:SetTextColor(1.0,0.7,0.0);
 			else
@@ -288,9 +288,9 @@ function CS_AddOnOrganizer_SaveProfile()
 		
 		if(not(found))then
 			CS_AddOnOrganizer_Profiles[newKey] = {[1] = SaveProfileEditBox:GetText()};
-			DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00CS_AddOnOrganizer|r - |CFFFFFFFF"..SaveProfileEditBox:GetText().."|r has been |CFF00FF00ADDED|r to profiles list!");
+			DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00" .. L["CS_AddOnOrganizer"] .. "|r - |CFFFFFFFF"..SaveProfileEditBox:GetText().."|r " .. L["has been"] .. "|CFF00FF00 " .. L["ADDED"] .. "|r " .. L["to profiles list"] .. "!");
 		else
-			DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00CS_AddOnOrganizer|r - |CFFFFFFFF"..SaveProfileEditBox:GetText().."|r has been |CFF00FF00MODIFIED|r in the profiles list!");
+			DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00" .. L["CS_AddOnOrganizer"] .. "|r - |CFFFFFFFF"..SaveProfileEditBox:GetText().."|r " .. L["has been"] .. "|CFF00FF00 " .. L["MODIFIED"] .. "|r " .. L["in the profiles list"] .. "!");
 		end
 		
 		local numaddons = GetNumAddOns();
@@ -302,14 +302,14 @@ function CS_AddOnOrganizer_SaveProfile()
 			end		
 		end
 	else
-		DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00CS_AddOnOrganizer|r - |CFFFF0000You have to write a name for the profile!|r");
+		DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00" .. L["CS_AddOnOrganizer"] .. "|r - |CFFFF0000" .. L["You have to write a name for the profile"] .. "!|r");
 	end
 end
 
 function CS_AddOnOrganizer_DeleteProfile()
 	if (not(id == nil)) then
 		
-		DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00CS_AddOnOrganizer|r - |CFFFF0000DELETED ID#"..id.."!|r");
+		DEFAULT_CHAT_FRAME:AddMessage("|CFF00FF00" .. L["CS_AddOnOrganizer"] .. "|r - |CFFFF0000" .. L["DELETED"] .. " ID#"..id.."!|r");
 		table.remove(CS_AddOnOrganizer_Profiles,id);
 		
 		if(table.getn(CS_AddOnOrganizer_Profiles) == 0) then

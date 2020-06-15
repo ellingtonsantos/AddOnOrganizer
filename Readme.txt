@@ -2,7 +2,7 @@
 #Thank you for trying CS_AddOnOrganizer!#
 #---------------------------------------#
 
-#-Version: 1.1011-#
+#-Version: 1.1200-#
 
 #-Features:-#
  This mod allows you to turn on and off,
@@ -16,6 +16,12 @@
  been waiting for.
 
 #-History:-#
+ v.1.1200
+ Updated version and ui number to match the
+ 1.12 patch! 
+ Added support to localization.
+ Added ptBR localization.
+
  v.1.1011
  Button added to the game main menu.
  This is placed below as there might be 
