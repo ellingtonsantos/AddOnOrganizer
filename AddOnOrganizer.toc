@@ -4,5 +4,5 @@
 ## Notes-ptBR: Lista e organiza todos os seus addons, permitindo que você crie perfis globais.
 ## SavedVariables: AddOnOrganizer_Profiles
 ## Author: Christian Schubert
-## Version: 1.1201
+## Version: 1.1200
 AddOnOrganizer.xml
