@@ -6,7 +6,6 @@ CS_ADDONORGANIZER_ADDONSLINE_HEIGHT = 16;
 CS_AddOnOrganizer_Profiles = {};
 CS_ADDONORGANIZER_VERSIONNUMBER = GetAddOnMetadata("AddOnOrganizer","Version");
 BINDING_HEADER_CS_ADDONORGANIZER_SEP = "AddOnOrganizer";
-BINDING_NAME_CS_ADDONORGANIZER_CONFIG = "Show / Hide";
 
 local id;
 local CS_AddOnOrganizer_AddOnList = {};

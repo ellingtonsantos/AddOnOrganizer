@@ -29,6 +29,7 @@ local locales = {
 }
 
 if (GetLocale() == "ptBR") then
+   BINDING_NAME_CS_ADDONORGANIZER_CONFIG = "Exibe / Oculta";
    L_PROFILE_TEXT1 = "Digite um novo nome na caixa de texto,";
    L_PROFILE_TEXT2 = "pressione 'Salvar' para salvar um novo perfil.";
    L_PROFILE_TEXT3 = "Perfis:";
@@ -41,6 +42,7 @@ if (GetLocale() == "ptBR") then
    L_DISABLE_ALL = "Desabilita Todos";
    L_PROFILES = "Perfis...";
 else
+   BINDING_NAME_CS_ADDONORGANIZER_CONFIG = "Show / Hide";
    L_PROFILE_TEXT1 = "Type a new name into the textbox,";
    L_PROFILE_TEXT2 = "press 'Save' to save a new profile.";
    L_PROFILE_TEXT3 = "Profiles:";
