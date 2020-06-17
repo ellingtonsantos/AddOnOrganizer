@@ -2,8 +2,8 @@ local locales = {
    ["ptBR"] = {
       ["CS_AddOnOrganizer"] = "AddOnOrganizer",
       ["Loaded"] = "Carregado",
-      ["Enabled"] = "Habilitado",
-      ["Disabled"] = "Desabilitado",
+      ["Enabled"] = "Ativado",
+      ["Disabled"] = "Desativado",
       ["No Title"] = "Sem Título",
       ["No Dependencies"] = "Sem Dependências";
       ["No Notes"] = "Sem anotações";
@@ -13,8 +13,8 @@ local locales = {
       ["LoadOnDemand"] = "Carrega sob demanda";
       ["Dependencies"] = "Dependências";
       ["Reason"] = "Motivo";
-      ["DISABLED"] = "Desabilitado",
-      ["You might still enable this addon"] = "Você ainda pode habilitar este addon";
+      ["DISABLED"] = "Desativado",
+      ["You might still enable this addon"] = "Você ainda pode ativar este addon";
       ["has been"] = "foi";
       ["ADDED"] = "ADICIONADO";
       ["to profiles list"] = "à lista de perfis";
@@ -24,7 +24,7 @@ local locales = {
       ["DELETED"] = "DELETADO";
 
       ["Accept"] = "Aceitar";
-      ["Warning! Some UI's need a restart of WOW in order to work properly!\nAlso remember not to unload any addon which is a dependency."] = "Aviso! Alguns UIs necessitam de um restart do WoW para que funcione adequadamente!\nLembre-se também de não desabilitar nenhum addon que seja uma dependência."; 
+      ["Warning! Some UI's need a restart of WOW in order to work properly!\nAlso remember not to unload any addon which is a dependency."] = "Aviso! Alguns UIs necessitam de um restart do WoW para que funcione adequadamente!\nLembre-se também de não desativar nenhum addon que seja uma dependência."; 
    },
 }
 
@@ -38,8 +38,8 @@ if (GetLocale() == "ptBR") then
    L_ACCEPT = "Aceitar";
    L_RELOADUI = "Recarregar";
    L_CANCEL = "Cancelar";
-   L_ENABLE_ALL = "Habilita Todos";
-   L_DISABLE_ALL = "Desabilita Todos";
+   L_ENABLE_ALL = "Ativa Todos";
+   L_DISABLE_ALL = "Desativa Todos";
    L_PROFILES = "Perfis...";
 else
    BINDING_NAME_CS_ADDONORGANIZER_CONFIG = "Show / Hide";
